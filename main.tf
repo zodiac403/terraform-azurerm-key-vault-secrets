@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "azurerm_key_vault_secret" "input" {
-  key_vault_id = var.keyvault_id
+  key_vault_id = var.key_vault_id
 
   for_each = var.input_secrets
   name     = each.key
@@ -20,7 +20,7 @@ resource "azurerm_key_vault_secret" "input" {
 }
 
 data "azurerm_key_vault_secret" "output" {
-  key_vault_id = var.keyvault_id
+  key_vault_id = var.key_vault_id
 
   for_each = var.output_secrets
   name     = each.value

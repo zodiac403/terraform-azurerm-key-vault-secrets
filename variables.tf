@@ -1,6 +1,6 @@
 # copyright zodiac403@gmx.de, 2022, see `LICENSE`
 
-variable "keyvault_id" {
+variable "key_vault_id" {
   description = "Azure resource ID of the Key Vault. Expected format: `/subscriptions/ID/resourceGroups/NAME/providers/Microsoft.KeyVault/vaults/NAME`"
   type        = string
 }
